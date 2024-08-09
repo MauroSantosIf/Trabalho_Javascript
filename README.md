@@ -12,5 +12,5 @@ Manipulação de arrays e objetos<br>
 Manipulação do DOM<br>
 Eventos e interatividade<br><br>
 Esses exercícios foram criados para reforçar o aprendizado e facilitar a prática dos conceitos estudados na aula.<br><br>
-link para verificar o projeto: <br><br>
+link para verificar o projeto:https://maurosantosif.github.io/Trabalho_Javascript/ <br><br>
 <p>OBS: O projeto ainda nõa está concluído</p>
