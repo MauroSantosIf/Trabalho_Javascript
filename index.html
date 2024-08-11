@@ -1,9 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
 
     <title>Exercícios JavaScript</title>
 
@@ -14,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" src="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
   </head>
 
@@ -21,82 +21,227 @@
 
     <header>
       <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-        
-            </button>
-            <img src="imagens/js.jpg" width="50px" height="50px" style="border-radius: 30px;">
-            <a class="navbar-brand" href="#">Exercício JavaScript</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="container">
-            <ul class="nav navbar-nav">
-              <li><a href="#secao_destino">&lt; e &gt; entre 5 Números</a></li>
-              <li><a href="#">Vogal</a></li>
-              <li><a href="#">Limites</a></li>
-              <li><a href="#">Ordem</a></li>
-              <li><a href="#">Positivo - Negativo</a></li>
-              <li><a href="#">Par - Ímpar</a></li>
-            </ul>
-          </div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+          <img src="imagens/js.jpg" width="50px" height="50px" style="border-radius: 30px;">
+          <a class="navbar-brand" href="#">Exercícios</a>
         </div>
-      </nav>
+    
+    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="container">
+          <ul class="nav navbar-nav">
+            <li><a href="#numero1">&lt; e &gt; entre 5 Números</a></li>
+            <li><a href="#caracter">Vogal</a></li>
+            <li><a href="#menor_limite">Limites</a></li>
+            <li><a href="#valor1">Ordem</a></li>
+            <li><a href="#">Positivo - Negativo</a></li>
+            <li><a href="#">Par - Ímpar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>
 
     <main role="main">
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Resolução exercícios JavaScript</h1>
-          <p class="lead text-muted">Solicitado pelo o professor Maurício Junior</p>
+          <h1 class="jumbotron-heading">Exercícios JavaScript</h1>
+          <p class="lead text-muted">O foco da página é apresentar os exercícios em JavaScript solicitados pelo o professor Maurício Jr, na matéria de Introdução a ferramentas web </p>
+          <p>
+            <div class="social-icons">
+              <a href="https://github.com/MauroSantosIf?tab=repositories"  title="GitHub">
+                  <i class="fab fa-github fa-5x"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/mauro-santos-57402424a/" title="LinkedIn">
+                  <i class="fab fa-linkedin fa-5x"></i>
+              </a>
+          </div>
+          </p>
         </div>
       </section>
+      <hr>
 
-      <div class="album py-5 bg-white">
+      <div class="album  bg-light">
         <div class="container">
 
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <p id="secao_destino">Números maior e menor entre 5 numeros dados pelo o usuário</p>
+            <div class="col-md-6">
+              <div class="card mb-3 box-shadow">
                 <div class="card-body">
-                  <form id="meu_formulario">
-                    <label>1° número: </label>
-                      <input placeholder="Digite o primeiro valor" type="number" id="numero1" class="form-control ">
-                      <label>2° número: </label>
-                      <input placeholder="Digite o segundo valor" type="number" id="numero2" class="form-control ">
-                      <label>3° número: </label>
-                      <input placeholder="Digite o terceiro valor" type="number" id="numero3" class="form-control ">
-                      <label>4° número: </label>
-                      <input placeholder="Digite o quarto valor" type="number" id="numero4" class="form-control ">
-                      <label>5° número: </label>
-                      <input placeholder="Digite o quinto valor" type="number" id="numero5" class="form-control ">
-                  </form>
-
-                  <button type="button" class="btn btn-danger" onclick="coletar_dados()">Calcule</button><br>
-                  <p class="card-text">Adicione 5 números de uma forma respectiva nos campos acima</p>
+                  <p style="color: red;" class="card-text">Números maiores e menores entre 5 números dados pelo o usuário</p>
                   <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                
+                <form id="meu_formulario " class="form-group-flex justify-content-between align-items-center">
 
+                  <div>
+                    <label>
+
+                      1° número: 
+                      <input id="numero1" id='verificar_numero' placeholder="Digite o primeiro valor" type="number"  class=" form-control ">
+                      2° número: 
+                      <input  placeholder="Digite o segundo valor" type="number" id="numero2" id='verificar_numero' class="form-control ">
+                      3° número: 
+                      <input  placeholder="Digite o terceiro valor" type="number" id="numero3" id='verificar_numero' class="form-control ">
+                      4° número: 
+                      <input  placeholder="Digite o quarto valor" type="number" id="numero4" id='verificar_numero' class="form-control ">
+                      5° número: 
+                      <input  placeholder="Digite o quinto valor" type="number" id="numero5" id='verificar_numero' class="form-control ">
+                    </label>
+                  </div>
+                </form>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="submit" class="btn btn-success" onclick="coletar_dados()">Verifique</button>
+                  </div>
+                </div>
                     <h4>Resultado: <span id="resultado"></span> </h4>
-                    
-                    
+                </div>
+              </div>
+            </div><!-- Fim da primeira questão-->
+            
+            
+            <div class="col-md-6">
+              <div class="card mb-3 box-shadow">
+                <div class="card-body">
+                  <p class="card-text" style="color: red;">Verifica se o caracter é uma vogal</p>
+                  <label>
+                    <form id="meu_formulario" class="d-flex">
+                      <input style="width: 300px;" maxlength="1" id="caracter" autocomplete="off" id="" type="text" class="form-control" placeholder="Digite um caracter">
+                    </form>
+                  </label>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button onclick="verificador_de_caracter()" type="submit" class="btn btn-success">Verifique</button>
+                    </div>
+                  </div>
+                    <h4>Resultado: <span id="resultado_caracter"></span></h4>
+                </div>
+              </div>
+                <hr>
+
+                <!--Ordena 3 valores-->
+                <div class="col-md-6">
+                  <div class="card mb-3 box-shadow">
+                    <div class="card-body">
+                      <p style="color: red;" class="card-text">Três valores: ordena e imprimi de forma crescente</p>
+                      <label>
+                        <form class="form-group d-flex">
+                          Primeiro número:
+                          <input class="form-control" type="number" id="valor1" placeholder="Digite o primeiro valor">
+                          Segundo número:
+                          <input class="form-control" type="number" id="valor2" placeholder="Digite o segundo valor">
+                          Terceiro número:
+                          <input class="form-control" type="number" id="valor3" placeholder="Digite o terceiro valor">
+                        </form>
+                      </label>
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="submit" onclick="ordenador()" class="btn btn-success">Verifique</button>
+                        </div>
+                      </div>
+                      <h4><span id="resultado_ordenado"></span></h4>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+              </div>
+            </div><!--Fim da segunda questão-->
 
-    </main>
+            <hr>
+          </div>
+          <div class="album  bg-light">
+            <div class="container">
+              <div class="col-md-6">
+                <div class="card mb-3 box-shadow">
+                  <div class="card-body">
+                    <p style="color: red;" class="card-text">Lê os limites inferior e superior de uma intervalo, imprime os pares e faz o somatório dos números impressos</p>
 
-    <footer class="text-muted">
-     
-    </footer>
-   
-    <script src="script.js"></script>
+                      <form id="intervalo_dados">
+                        <div class="">
+                            <label for="menor_limite">Limite Inferior:</label>
+                            <input style="width: 400px;" type="number" class="form-control" id="menor_limite" name="menor_limite" placeholder="Digite o limite inferior" >
+                        </div>
+                        <div class="form-group">
+                            <label for="maior_valor">Limite Superior:</label>
+                            <input style="width: 400px;" type="number" class="form-control" id="maior_valor" name="maior_valor" placeholder="Digite o limite superior" >
+                        </div>
+                        <button type="submit" class="btn btn-success">Verifique</button>
+                    </form>
+                      <div id="resultados_pares" class="mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+            <hr><!--
+            <div class="col-md-6">
+              <div class="card mb-3 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p style="color: red;" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="col-md-6">
+              <div class="card mb-3 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="col-md-6">
+              <div class="card mb-3 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+            <script src="codigos/caracter.js"></script>
+            <script src="codigos/menor_limite.js"></script>
+            <script src="codigos/numeros.js"></script>
+            <script src="codigos/ordem.js"></script>
+            <script src="codigos/par.js"></script>
+            <script src="codigos/positivo.js"></script>
+            <script src="codigos/vogal.js"></script>
   </body>
 </html>
