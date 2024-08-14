@@ -1,11 +1,8 @@
 document.getElementById('intervalo_dados').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio do formulário para processamento via JavaScript
-
+    event.preventDefault();
     const menor_limite = parseInt(document.getElementById('menor_limite').value);
     const maior_valor = parseInt(document.getElementById('maior_valor').value);
     const mostrar_resultados = document.getElementById('resultados_pares');
-
-    // verificamos os limites de entrada 
     if (isNaN(menor_limite) || isNaN(maior_valor) || menor_limite >= maior_valor) {
         mostrar_resultados.innerHTML = '<div class="alert alert-danger">Por favor, insira limites válidos. O limite inferior deve ser menor que o limite superior.</div>';
         return;
